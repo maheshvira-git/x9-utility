@@ -22,14 +22,13 @@ public class X9Parser {
 
   public void parse(InputStream inputStream) throws IOException {
 
-    byte[] size = new byte[4];
+    byte[] first4Bytes = new byte[4];
 
     int len = 0;
 
-    while((len = inputStream.readNBytes(size, 0, size.length)) != 0) {
-     
-      String fourChar = new String(size, Charset.forName("ibm037"));
-      ByteBuffer recordSizeBuffer = ByteBuffer.wrap(size);
+    while((len = inputStream.readNBytes(first4Bytes, 0, first4Bytes.length)) != 0) {
+         
+      ByteBuffer recordSizeBuffer = ByteBuffer.wrap(first4Bytes);
       int recSize = recordSizeBuffer.getInt();
     
       if (recSize > MAX_RECORD_LENGTH_IN_FILE) {
@@ -39,8 +38,9 @@ public class X9Parser {
       byte [] data = new byte[recSize];
       
       inputStream.readNBytes(data, 0, data.length);
-     
-      System.out.println("Record Size: " + recSize + " Data: " + new String(data, Charset.forName("ibm037")) );
+
+      X9RecordParser.parseRecord(data);
+      
     }
 
     

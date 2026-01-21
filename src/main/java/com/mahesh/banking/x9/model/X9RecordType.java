@@ -30,6 +30,7 @@ import com.mahesh.banking.x9.record.X9CashLetterControl90Record;
 import com.mahesh.banking.x9.record.X9FileControl99Record;
 
 import static com.mahesh.banking.x9.X9Constants.DEFAULT_RCD_LENGTH;
+import static com.mahesh.banking.x9.X9Constants.DEFAULT_RCD_LENGTH_SUMMARY;
 import static com.mahesh.banking.x9.X9Constants.UNDEFINED_RCD_LENGTH;
 
 public enum X9RecordType {
@@ -51,7 +52,7 @@ public enum X9RecordType {
   IMAGE_VIEW_DETAIL_50_RCD("50",DEFAULT_RCD_LENGTH, X9ImageViewDetail50Record.class),
   IMAGE_VIEW_DATA_52_RCD("52",UNDEFINED_RCD_LENGTH, X9ImageViewData52Record.class),
   IMAGE_VIEW_ANALYSIS_54_RCD("54",DEFAULT_RCD_LENGTH, X9ImageViewAnalysis54Record.class),
-  IMAGE_TEST_SUMMARY_55_RCD("55",DEFAULT_RCD_LENGTH, X9ImageTestSummary55Record.class),
+  IMAGE_TEST_SUMMARY_55_RCD("55",DEFAULT_RCD_LENGTH_SUMMARY, X9ImageTestSummary55Record.class),
   IMAGE_TEST_DETAIL_56_RCD("56",UNDEFINED_RCD_LENGTH, X9ImageTestDetail56Record.class),
   CREADIT_RECONCILIATION_61_RCD("61",UNDEFINED_RCD_LENGTH, X9CreditReconciliation61Record.class),
   DIGITAL_CERTIFICATE_64_RCD("64",UNDEFINED_RCD_LENGTH, X9DigitalCertificate64Record.class),
