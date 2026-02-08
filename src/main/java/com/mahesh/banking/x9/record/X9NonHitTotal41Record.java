@@ -2,9 +2,9 @@ package com.mahesh.banking.x9.record;
 
 import com.mahesh.banking.x9.model.X9RecordType;
 
-public class X9CheckDetailAddendumC28Record extends DefaultX9Record {
+public class X9NonHitTotal41Record extends DefaultX9Record {
 
-  public X9CheckDetailAddendumC28Record() {
+  public X9NonHitTotal41Record() {
   }
 
   @Override
@@ -14,6 +14,6 @@ public class X9CheckDetailAddendumC28Record extends DefaultX9Record {
 
   @Override
   public X9RecordType getRecordType() {
-    return X9RecordType.CHECK_DETAIL_ADDENDUM_C_28_RCD;
+    return X9RecordType.NON_HIT_TOTAL_41_RCD;
   }
 }
