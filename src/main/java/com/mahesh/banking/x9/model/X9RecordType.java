@@ -17,7 +17,7 @@ import com.mahesh.banking.x9.record.X9RoutingNumberSummary85Record;
 import com.mahesh.banking.x9.record.X9User68Record;
 import com.mahesh.banking.x9.record.X9AccountsTotal40Record;
 import com.mahesh.banking.x9.record.X9BoxSummary75Record;
-import com.mahesh.banking.x9.record.X9NonHitTotal42Record;
+import com.mahesh.banking.x9.record.X9NonHitTotal41Record;
 import com.mahesh.banking.x9.record.X9ImageViewDetail50Record;
 import com.mahesh.banking.x9.record.X9ImageViewData52Record;
 import com.mahesh.banking.x9.record.X9ImageViewAnalysis54Record;
@@ -48,7 +48,7 @@ public enum X9RecordType {
   RETURN_DETAIL_ADDENDUM_C_34_RCD("34",UNDEFINED_RCD_LENGTH, X9ReturnDetailAddendumC34Record.class),
   RETURN_DETAIL_ADDENDUM_D_35_RCD("35",DEFAULT_RCD_LENGTH, X9ReturnDetailAddendumD35Record.class),  
   ACCOUNTS_TOTAL_40_RCD("40",DEFAULT_RCD_LENGTH, X9AccountsTotal40Record.class),
-  NON_HIT_TOTAL_41_RCD("41",DEFAULT_RCD_LENGTH, X9NonHitTotal42Record.class),
+  NON_HIT_TOTAL_41_RCD("41",DEFAULT_RCD_LENGTH, X9NonHitTotal41Record.class),
   IMAGE_VIEW_DETAIL_50_RCD("50",DEFAULT_RCD_LENGTH, X9ImageViewDetail50Record.class),
   IMAGE_VIEW_DATA_52_RCD("52",UNDEFINED_RCD_LENGTH, X9ImageViewData52Record.class),
   IMAGE_VIEW_ANALYSIS_54_RCD("54",DEFAULT_RCD_LENGTH, X9ImageViewAnalysis54Record.class),
