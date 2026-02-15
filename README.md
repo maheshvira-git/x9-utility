@@ -18,7 +18,9 @@ OR
 
 >  ./gradlew clean
 
-### Where to get Sample X9 Files
+### X9 Information Reference
+
+https://www.ibm.com/docs/en/ftmfm/4.0.6?topic=guide-creating-record-types-check
 
 https://x9ware.com/test-file-downloads/
 
