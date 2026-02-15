@@ -1,0 +1,15 @@
+SerialNumber,Field,Value,Description
+1, 'Record Type',	‘01’	Always set to ‘01’.
+2,'Standard Level	FILE_DEF→FORMAT',00,	The value specified in the FORMAT column of the Partner Profiles FILE_DEF table. This value is converted to the appropriate corresponding standard-level value field in the Partner Profiles transmission definition.
+3, 'Test File Indicator	FILE_DEF→FILE_TYPE_IND',	Either the letter T or P, P is used when the test file indicator field in the Partner Profiles transmission definition is set to P. T is used when the test file indicator is anything other than P.
+4, 'Immediate Receiving Point Routing Number	PARTNER→PID',123456789,	The value as specified in the ID field in the Partner Profiles participant definition.
+5, 'Immediate Origin Routing Number	BANK→RT',123456789,	The value as specified in the routing number field in the Partner Profiles bank definition.
+6, 'File Creation Date	Current date',00000000,	The date the file is created.
+7, 'File Creation Time	Current time',0000,	The time the file is created.
+8, 'Resend Indicator',	Y or N,	N unless the file is being resent in its entirety, then Y.
+9, 'Immediate Receiving Point	PARTNER→PNAME',abc,	The value as specified in the description field in the Partner Profiles participant definition.
+10, 'Immediate Origin Name	BANK→NAME',pqr,	The value as specified in the name field in the Partner Profiles bank definition.
+11, 'File ID Modifier',0,	Unique alphanumeric value	The modifier is set to zero for the first transmission that is sent to a partner in a specific hour and minute. Each subsequent transmission that is sent to the same partner during the same minute gets a modifier in the range 1 - 9 and then A - Z. If all modifier values for a particular hour and minute are used, the transmission sent time is increased by 1 minute and Distribution assigns the modifier for that minute.
+12, 'Country Code	PARTNER→COUNTRY',US,	The value as specified in the country field in the Partner Profiles participant definition.
+13, 'User Field',,	Blank	Always set to blank.
+14, 'Reserved',,	Blank or ‘1’	For UCD and X9.100-187 formatted transmissions, this field is the version of the companion document and is set to ‘1’. It is blank for all others.
